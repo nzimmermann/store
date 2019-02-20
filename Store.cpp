@@ -12,6 +12,8 @@
   Provided code for CSCI 3010, HW 2, Spring 2019
 */
 
+// Shopping Cart
+
 std::string ShoppingCart::DisplayCart() {
   std::string inv = "";
   for (Item * i : in_cart_) {
@@ -52,6 +54,7 @@ void ShoppingCart::AddItem(Item * to_add) {
   }
 }
 
+// Store
 
 Store::Store(std::string filename) {
   filename_ = filename;
