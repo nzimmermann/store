@@ -13,10 +13,19 @@
 int main(){
 
     Store mainStore("store.txt");
-    
     TextUI ShopDisplay;
+    bool exit = false;
 
-    std::cout << ShopDisplay.MainMenu() << std::endl;
+    while(!exit){
+        std::string choice = ShopDisplay.MainMenu();
+        ShopDisplay.RouteChoice(mainStore,choice);
+        if(choice == "Leave")
+            exit = true;
+    }
+
+    
+    
+
 
     return 0;
 }
