@@ -26,8 +26,9 @@ std::string TextUI::MainMenu() {
   while (choice < 0 || choice >= main_menu_.size()) {
     // display the main menu
     for (int i = 0; i < main_menu_.size(); i++) {
-      std::cout << std::to_string(i) << ": " << main_menu_[i] << std::endl;
+      std::cout << std::to_string(i) << ": " << main_menu_[i]  << std::endl;
     }
+    std::cout << "\n";
     std::string str_choice;
     std::cin >> str_choice;
     try {

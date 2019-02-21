@@ -10,9 +10,12 @@
 #include "TextUI.h"
 
 
-int main(){
+int main(int argc, char *argv[]){
 
-    Store mainStore("store.txt");
+    std::string storeFile;
+    storeFile = argv[1];
+
+    Store mainStore(storeFile);
     TextUI ShopDisplay;
     bool exit = false;
 
@@ -22,10 +25,5 @@ int main(){
         if(choice == "Leave")
             exit = true;
     }
-
-    
-    
-
-
     return 0;
 }
